@@ -6,7 +6,7 @@
 - [Docker](#docker)
 - [Ubuntu](#ubuntu)
 - [Web Applications Security](#web-applications-security)
-   + [XML eXternal Entity (XXE)](#XML-eXternal-Entity-(XXE))
+   + [XML eXternal Entity (XXE)](#xml-external-entity-(xxe))
 
 ## Burp Suite Professional
 ### Running own collaborator:  
