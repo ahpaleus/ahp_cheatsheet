@@ -1,6 +1,11 @@
 
 # ahp_cheatsheet
 
+## Docker
+Run from _Dockerfile_ in directory:
+```docker build -t name .```
+
+
 ## Ubuntu
 ### Setup polish locales
 Show locales:
