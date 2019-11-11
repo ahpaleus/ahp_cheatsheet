@@ -6,7 +6,7 @@
 - [Docker](#docker)
 - [Ubuntu](#ubuntu)
 - [Web Applications Security](#web-applications-security)
-   + [XML eXternal Entity (XXE)](#xml-external-entity-(xxe))
+   + [XXE](#xxe)
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -32,7 +32,7 @@ Setup locales:
 `update-locale LANG=pl_PL.utf8`
 
 ## Web Applications Security
-### XML eXternal Entity (XXE)
+### XXE  
 #### Exfiltrate in subdomain name:  
 dtd file without .dtd extension _(test.html)_:  
 ```xml
