@@ -7,11 +7,11 @@
 - [Ubuntu](#ubuntu)
 
 ## Burp Suite Professional
-Running own collaborator:  
+### Running own collaborator:  
 `java -Xms10m -Xmx200m -XX:GCTimeRatio=19 -jar burp.jar --collaborator-server`
 
 ## Docker
-Run from _Dockerfile_ in directory:  
+### Run from _Dockerfile_ in directory:  
 ```docker build -t name .```
 
 
