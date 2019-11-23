@@ -9,7 +9,7 @@
    + [XSS](#xss) 
    + [XXE](#xxe)
    + [ESI](#esi)
-- [dev/null](#dev/null)
+- [dev/null](#devnull)
 
 ## Burp Suite Professional
 ### Running own collaborator:  
