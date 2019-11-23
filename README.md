@@ -80,7 +80,8 @@ you have ESI injection
  - https://www.slideshare.net/cisoplatform7/edge-side-include-injection-abusing-caching-servers-into-ssrf-and-transparent-session-hijacking
  
  ### Request Smuggling  
- TE.CL + Hackvertor *(disable “Update Content-Length” in Repeater && “Auto Update Content Length” in Hackvertor Settings)*  
+ TE.CL + Hackvertor  
+ *(disable “Update Content-Length” in Repeater && “Auto Update Content Length” in Hackvertor Settings)*  
  ```
  POST / HTTP/1.1
 Host: abc.com
