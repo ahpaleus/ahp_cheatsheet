@@ -7,7 +7,7 @@
 - [Ubuntu](#ubuntu)
 - [Web Applications Security](#web-applications-security)
    + [XXE](#xxe)
-   + [ESI](#esi)
+   + [ESI](#esi-(edge-side-include-injection))
 
 ## Burp Suite Professional
 ### Running own collaborator:  
