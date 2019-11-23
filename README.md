@@ -10,7 +10,7 @@
    + [XXE](#xxe)
    + [ESI](#esi)
    + [Request Smuggling](#request-smuggling)
-- [dev/null](#devnull)
+- [/dev/null](#devnull)
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -98,7 +98,7 @@ x=1<@/length_2><@/set_var_1>
 0
 ```
 
-## dev/null
+## /dev/null
 nc permament 'web-server'
 ```sh
 while true; do 
