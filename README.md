@@ -48,7 +48,7 @@ Injection:
 ```  
 http://dnsbin.zhack.ca/  
 ### ESI 
-Edge Side Include Injection
+*Edge Side Include Injection*    
 WAF'alike bypass:
 ```html
 <svg<!--esi--> onload=aler<!--esi-->t<!--esi-->``
