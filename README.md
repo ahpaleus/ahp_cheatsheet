@@ -62,4 +62,7 @@ you have ESI injection
 ```xml
 <esi:include src="/anypage.html" dca="none" />
 ```
-
+ - https://twitter.com/alxbrsn/status/981256374230319112
+ - https://t.co/XRxIalWcng?amp=1 
+ - https://t.co/vzRIo3RuaR?amp=1
+ - https://www.slideshare.net/cisoplatform7/edge-side-include-injection-abusing-caching-servers-into-ssrf-and-transparent-session-hijacking
