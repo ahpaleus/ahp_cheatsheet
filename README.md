@@ -99,9 +99,19 @@ x=1<@/length_2><@/set_var_1>
 ```
 
 ## /dev/null
-nc permament 'web-server'
+### nc permament 'web-server'
 ```sh
 while true; do 
   echo -e "HTTP/1.1 200 OK\n\n $(date)" | nc -l -p 1500 -q 1
 done
 ```
+
+### vim dark background
+```
+:set background=dark
+```
+permanently:
+```
+echo 'set background=dark' >> $HOME/.vimrc
+```
+
