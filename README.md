@@ -106,7 +106,7 @@ while true; do
 done
 ```
 
-### vim dark background
+### nice colors for vim dark background
 ```
 :set background=dark
 ```
