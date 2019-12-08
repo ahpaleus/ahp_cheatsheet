@@ -106,7 +106,7 @@ while true; do
 done
 ```
 
-### nice colors for vim dark background
+### vim - nice colors for dark background
 ```
 :set background=dark
 ```
@@ -115,3 +115,7 @@ permanently:
 echo 'set background=dark' >> $HOME/.vimrc
 ```
 
+### vim - show line numbers
+```
+:set number
+```
