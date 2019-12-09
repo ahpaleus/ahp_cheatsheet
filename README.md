@@ -16,6 +16,11 @@
 ### Running own collaborator:  
 `java -Xms10m -Xmx200m -XX:GCTimeRatio=19 -jar burp.jar --collaborator-server`
 
+Non-standard ports:  
+Configuration file: `--collaborator-config=myconfig.config`
+ - https://portswigger.net/burp/documentation/collaborator/deploying#running-on-non-standard-ports
+ - https://portswigger.net/burp/documentation/collaborator/deploying#collaborator-configuration-file-format
+
 ## Docker
 ### Run from _Dockerfile_ in directory:  
 ```docker build -t name .```
