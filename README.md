@@ -11,6 +11,7 @@
    + [ESI](#esi)
    + [Request Smuggling](#request-smuggling)
    + [Hackvertor](#hackvertor)
+- [Network](#network)
 - [/dev/null](#devnull)
 
 ## Burp Suite Professional
@@ -114,7 +115,11 @@ x=1<@/length_2><@/set_var_1>
  <@python_4("import json;output = json.dumps(input)","7d808063a7c69f9dad4f4a3cb1c2bd1a")>test123'<>"<@/python_4>
  Result: "test123'<>\""
 ```
-
+## Network  
+### Lookup and display the route for a destination  
+```
+route get 192.168.13.14
+```
 
 ## /dev/null
 ### nc permanent 'web-server'
