@@ -25,8 +25,16 @@ Configuration file: `--collaborator-config=myconfig.config`
 
 ## Docker
 ### Run from _Dockerfile_ in directory:  
-```docker build -t name .```
-
+```docker build -t name .```  
+### Remove all stopped containers  
+```docker container prune```
+### Remove dangling images
+```docker image prune```  
+### Stop and remove all containers
+```
+$ docker container stop $(docker container ls -aq)
+$ docker container rm $(docker container ls -aq)
+```
 
 ## Ubuntu
 ### Setup polish locales
