@@ -50,6 +50,17 @@ Install polish locale:
 Setup locales:  
 `update-locale LANG=pl_PL.utf8`
 
+### Add wireguard to systemd:  
+```sh
+# Add:  
+sudo systemctl enable wg-quick@wg0.service
+sudo systemctl daemon-reload
+# Run:  
+sudo systemctl start wg-quick@wg0
+# Check status:
+systemctl status wg-quick@wg0
+```  
+
 ## Web Applications Security
 ### XSS
 Some helpful payloads caught in the wild
