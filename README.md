@@ -14,7 +14,8 @@
    + [SQL Injection](#sql-injection)
    + [PHP](#php)
 - [Network](#network)
-- [/dev/null](#devnull)
+- [/dev/null](#devnull)  
+- [low-level](#low-level)  
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -186,4 +187,10 @@ echo 'set background=dark' >> $HOME/.vimrc
 ### vim - show line numbers
 ```
 :set number
+```  
+  
+## low-level
+### GLIBC version
+```sh
+ldd --version
 ```
