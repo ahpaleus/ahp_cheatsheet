@@ -8,6 +8,7 @@
 - [Web Applications Security](#web-applications-security)
    + [XSS](#xss) 
    + [XXE](#xxe)
+   + [LFI](#lfi)
    + [ESI](#esi)
    + [Request Smuggling](#request-smuggling)
    + [Hackvertor](#hackvertor)
