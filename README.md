@@ -206,3 +206,11 @@ echo 'set background=dark' >> $HOME/.vimrc
 ```sh
 ldd --version
 ```
+
+### Negative integer (i.e. from printf(%d)/unsigned int to hex in python
+```py
+>>> hex(-199703103 & (2**32-1)) # 32-bit
+'0xf418c5c1L'
+>>> hex(-199703103 & (2**64-1)) # 64-bit
+'0xfffffffff418c5c1L'
+```
