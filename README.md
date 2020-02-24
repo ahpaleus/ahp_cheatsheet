@@ -200,6 +200,11 @@ echo 'set background=dark' >> $HOME/.vimrc
 ```
 :set number
 ```  
+
+### vim - use a mouse  
+```
+:set mouse=a
+```  
   
 ## low-level
 ### GLIBC version
