@@ -211,6 +211,15 @@ echo 'set background=dark' >> $HOME/.vimrc
 ```
 :set mouse=a
 ```  
+
+### vmnet restart
+```
+/Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --stop
+/Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --config
+/Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --start
+Check your current status:
+/Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --status
+```  
   
 ## low-level
 ### GLIBC version
