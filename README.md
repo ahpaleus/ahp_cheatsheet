@@ -234,3 +234,19 @@ ldd --version
 >>> hex(-199703103 & (2**64-1)) # 64-bit
 '0xfffffffff418c5c1L'
 ```
+
+### Shared library actually linked
+```sh
+$ ldd -r -v aerofloat
+	linux-vdso.so.1 (0x00007ffce8bf5000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fcbeeced000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fcbef0de000)
+
+	Version information:
+	./aerofloat:
+		libc.so.6 (GLIBC_2.7) => /lib/x86_64-linux-gnu/libc.so.6
+		libc.so.6 (GLIBC_2.2.5) => /lib/x86_64-linux-gnu/libc.so.6
+	/lib/x86_64-linux-gnu/libc.so.6:
+		ld-linux-x86-64.so.2 (GLIBC_2.3) => /lib64/ld-linux-x86-64.so.2
+		ld-linux-x86-64.so.2 (GLIBC_PRIVATE) => /lib64/ld-linux-x86-64.so.2
+```
