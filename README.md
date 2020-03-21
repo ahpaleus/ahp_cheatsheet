@@ -250,3 +250,8 @@ $ ldd -r -v aerofloat
 		ld-linux-x86-64.so.2 (GLIBC_2.3) => /lib64/ld-linux-x86-64.so.2
 		ld-linux-x86-64.so.2 (GLIBC_PRIVATE) => /lib64/ld-linux-x86-64.so.2
 ```
+
+### pwntools environment variables (LD_PRELOAD)
+```py
+p = process('./aerofloat', env = {'LD_PRELOAD' : './libc.so.6 ./ld-linux-x86-64.so.2'})
+```
