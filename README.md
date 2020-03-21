@@ -276,3 +276,8 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 0: invalid 
 >>> struct.pack("<L", 0x401192).decode("utf-8", "backslashreplace")
 '\\x92\x11@\x00'
 ```
+
+### gdb SIGHUP disable
+```
+handle SIGHUP noprint nostop pass
+```
