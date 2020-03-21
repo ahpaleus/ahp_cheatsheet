@@ -265,3 +265,14 @@ puts@plt:
 0x040430(*0x04018),
 0x04018 = 0x7f......
 ```
+### invalid start byte .decode() python
+```py
+>>> struct.pack("<L", 0x401192).decode()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  
+e.g.: (https://docs.python.org/3/howto/unicode.html)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 0: invalid start byte
+>>> struct.pack("<L", 0x401192).decode("utf-8", "backslashreplace")
+'\\x92\x11@\x00'
+```
