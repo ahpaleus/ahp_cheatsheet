@@ -15,6 +15,7 @@ for my private purposes :)
    + [Hackvertor](#hackvertor)
    + [SQL Injection](#sql-injection)
    + [PHP](#php)
+   + [ASP](#ASP)
 - [Network](#network)
 - [/dev/null](#devnull)  
 - [low-level](#low-level)  
@@ -180,6 +181,11 @@ $ cat test1234.txt | base64
 /9j/4AAQSkZJRgABAgAAAQABAAD//kFBQUFBQUFBQUFBQUFBQUFBQUFB
 */
 ```
+### ASP.NET
+ - RCE Telerik https://know.bishopfox.com/research/cve-2019-18935-remote-code-execution-in-telerik-ui?utm_campaign=190101_Posts_Blog&utm_source=Caleb%20-%20Github
+ - https://github.com/noperator/CVE-2019-18935
+ - https://github.com/Illuminopi/RCEvil.NET/    
+
 ## Network  
 ### Lookup and display the route for a destination  
 ```
