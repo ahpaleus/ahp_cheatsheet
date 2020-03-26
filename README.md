@@ -297,3 +297,9 @@ set follow-fork-mode child
 show follow-fork-mode
 ```
 
+### Display arguments passed to a function when stopped at a call instruction
+```
+pwndbg> dumpargs
+        format:    0xffffdb2c ◂— 'test\n'
+        vararg:    0x20
+```
