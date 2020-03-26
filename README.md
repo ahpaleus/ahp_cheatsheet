@@ -288,3 +288,12 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 0: invalid 
 ```
 handle SIGHUP noprint nostop pass
 ```
+
+### gdb follow-fork
+set follow-fork-mode command controls the behavior of GDB when the debugged program calls fork() or vfork()  
+```
+set follow-fork-mode parent
+set follow-fork-mode child
+show follow-fork-mode
+```
+
