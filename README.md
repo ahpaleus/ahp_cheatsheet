@@ -303,3 +303,21 @@ pwndbg> dumpargs
         format:    0xffffdb2c ◂— 'test\n'
         vararg:    0x20
 ```
+
+### Extended information for virtual address (gdb)
+```
+pwndbg> xinfo 0x80490a0
+Extended information for virtual address 0x80490a0:
+
+  Containing mapping:
+ 0x8049000  0x804a000 r-xp     1000 1000   /mnt/hgfs/LEARN/tamuctf/b64decoder/b64decoder
+
+  Offset information:
+         Mapped Area 0x80490a0 = 0x8049000 + 0xa0
+         File (Base) 0x80490a0 = 0x8048000 + 0x10a0
+      File (Segment) 0x80490a0 = 0x8049000 + 0xa0
+         File (Disk) 0x80490a0 = /mnt/hgfs/LEARN/tamuctf/b64decoder/b64decoder + 0x10a0
+
+ Containing ELF sections:
+            .plt.got 0x80490a0 = 0x80490a0 + 0x0
+```
