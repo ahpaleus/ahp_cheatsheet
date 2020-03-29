@@ -321,3 +321,12 @@ Extended information for virtual address 0x80490a0:
  Containing ELF sections:
             .plt.got 0x80490a0 = 0x80490a0 + 0x0
 ```
+### pwndbg search pointer
+```
+pwndbg> search -t pointer 0x804b398
+binary          0x8048394 0x804b398
+binary          0x80490a2 cwde
+[heap]          0x8e76570 0x804b398
+[heap]          0x8e76574 0x804b398
+[stack]         0xffa8007c 0x804b398
+[stack]         0xffa80080 0x804b398
