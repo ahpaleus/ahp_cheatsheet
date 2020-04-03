@@ -20,6 +20,7 @@ for my private purposes :)
 - [Network](#network)
 - [/dev/null](#devnull)  
 - [low-level](#low-level)  
+- [IDA PRO](#ida-pro)  
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -348,3 +349,8 @@ _To prevent 00 00 in case write_size as above:_
 ```py
 b'%56c%74$hhna\x98\xb3\x04\x08'
 ```
+
+## IDA PRO
+- https://www.hex-rays.com/products/ida/support/freefiles/IDA_Pro_Shortcuts.pdf (IDA PRO shortcuts)  
+- https://www.unknowncheats.me/wiki/How_to_use_IDA_Pro_efficiently (How to use IDA PRO efficiently)  
+- https://malwareunicorn.org/workshops/idacheatsheet.html (IDA PRO cheatsheet)  
