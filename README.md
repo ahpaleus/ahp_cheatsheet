@@ -358,3 +358,4 @@ b'%56c%74$hhna\x98\xb3\x04\x08'
 
 ## Heap Exploitation
 - _After tcache is filled, the free memory is placed in fastbin or unsorted bin as before._ (https://ctf-wiki.github.io/ctf-wiki/pwn/linux/glibc-heap/implementation/tcache/)
+_tcache bins can only hold 7 entries at a time._ (https://drive.google.com/file/d/1XpdruvtC1qW0OKLxO8FaqU9XCl8O_SON/view)
