@@ -21,6 +21,7 @@ for my private purposes :)
 - [/dev/null](#devnull)  
 - [low-level](#low-level)  
 - [IDA PRO](#ida-pro)  
+- [Heap Exploitation](#heap-exploitation)  
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -354,3 +355,6 @@ b'%56c%74$hhna\x98\xb3\x04\x08'
 - https://www.hex-rays.com/products/ida/support/freefiles/IDA_Pro_Shortcuts.pdf (IDA PRO shortcuts)  
 - https://www.unknowncheats.me/wiki/How_to_use_IDA_Pro_efficiently (How to use IDA PRO efficiently)  
 - https://malwareunicorn.org/workshops/idacheatsheet.html (IDA PRO cheatsheet)  
+
+## Heap Exploitation
+- _After tcache is filled, the free memory is placed in fastbin or unsorted bin as before._ (https://ctf-wiki.github.io/ctf-wiki/pwn/linux/glibc-heap/implementation/tcache/)
