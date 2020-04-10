@@ -359,3 +359,13 @@ b'%56c%74$hhna\x98\xb3\x04\x08'
 ## Heap Exploitation
 - _After tcache is filled, the free memory is placed in fastbin or unsorted bin as before._ (https://ctf-wiki.github.io/ctf-wiki/pwn/linux/glibc-heap/implementation/tcache/)  
 _tcache bins can only hold 7 entries at a time._ (https://drive.google.com/file/d/1XpdruvtC1qW0OKLxO8FaqU9XCl8O_SON/view)
+
+### Hijack hook functions  
+```
+The GNU C Library lets you modify the behavior of malloc, realloc, and free by specifying appropriate hook functions. You can use these hooks to help you debug programs that use dynamic memory allocation, for example.
+```
+Hook variables declared in malloc.h and their default values are 0x0 - __malloc_hook, __free_hook.  
+```
+gef➤  p __free_hook
+$2 = (void (*)(void *, const void *)) 0x0
+```
