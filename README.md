@@ -362,7 +362,10 @@ _tcache bins can only hold 7 entries at a time._ (https://drive.google.com/file/
 
 ### Hijack hook functions  
 ```
-The GNU C Library lets you modify the behavior of malloc, realloc, and free by specifying appropriate hook functions. You can use these hooks to help you debug programs that use dynamic memory allocation, for example.
+The GNU C Library lets you modify the behavior of malloc, 
+realloc, and free by specifying appropriate hook functions. 
+You can use these hooks to help you debug programs that use 
+dynamic memory allocation, for example.
 ```
 Hook variables declared in malloc.h and their default values are 0x0 - __malloc_hook, __free_hook.  
 ```
