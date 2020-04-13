@@ -304,6 +304,19 @@ set follow-fork-mode command controls the behavior of GDB when the debugged prog
 set follow-fork-mode parent
 set follow-fork-mode child
 show follow-fork-mode
+```  
+
+### gdb  
+```
+set $p=0x... setting up your own variable in gdb
+info symbol 0x....
+pi -> interactive python shell in gdb
+```
+```
+breakpoint -> stop at the specific address
+watch -> stop if anything is written under address
+rwatch -> stop if antything is read from the specific address
+(it works fine for 4 watches)
 ```
 
 ### Display arguments passed to a function when stopped at a call instruction
@@ -339,7 +352,15 @@ binary          0x80490a2 cwde
 [heap]          0x8e76574 0x804b398
 [stack]         0xffa8007c 0x804b398
 [stack]         0xffa80080 0x804b398
-```
+```  
+### pwndbg  
+breakrva  
+nextcall  
+distance 0x78bc. 0x78..., w gdb: p/x 0x...-0x...  
+canary (takes it from AUXV, it assumes that canary can't be changed)  
+eq -> write hex qwordst at the specified address  
+pi pwndbg.memory.write....  
+
 ### Format String (pwntools)
 ```
 >>> from pwn import *
@@ -355,6 +376,13 @@ b'%56c%74$hhna\x98\xb3\x04\x08'
 - https://www.hex-rays.com/products/ida/support/freefiles/IDA_Pro_Shortcuts.pdf (IDA PRO shortcuts)  
 - https://www.unknowncheats.me/wiki/How_to_use_IDA_Pro_efficiently (How to use IDA PRO efficiently)  
 - https://malwareunicorn.org/workshops/idacheatsheet.html (IDA PRO cheatsheet)  
+
+### Useful settings:
+Line prefixes  
+Stack pointer  
+Auto comments  
+--
+right click -> copy to assembly
 
 ## Heap Exploitation
 - _After tcache is filled, the free memory is placed in fastbin or unsorted bin as before._ (https://ctf-wiki.github.io/ctf-wiki/pwn/linux/glibc-heap/implementation/tcache/)  
@@ -378,3 +406,49 @@ $2 = (void (*)(void *, const void *)) 0x0
 _In the TCache House of Spirit, an attacker passes a pointer to a fake chunk header to the free API. This chunk can be of almost arbitrary size. The allocator will subsequently insert this fake chunk into a tcache freelist. The next malloc of the appropriate size will return the fake chunk which may overlap data that may be of benefit to the attacker._
 - Tcache poisoning (https://drive.google.com/file/d/1XpdruvtC1qW0OKLxO8FaqU9XCl8O_SON/view?usp=sharing)  
 _The attack is performed via corrupting, or poisoning the tcache such that malloc returns an arbitrary pointer. This may allow for control flow hijacking if malloc returns a pointer to a function pointer and an attacker is able to write to that malloc returned buffer. TCache poisoning is possible from heap corruption including buffer overflows and Use-After-Frees._
+
+## pwntools
+```py
+from pwn import * 
+xor('costam', [7+i for i in range(33)])
+```
+```py
+pause(1)
+```
+```
+$ pwn asm 'nop;nop;nop'
+$ pwn cyclic 100
+$ pwn cyclic -l aaac
+```
+
+## binary security
+```
+no PIE -> global addresses are constant (we can overwrite got)  
+Partial RELRO -> it is possible to overwrite got  
+full relro -> got read only, it can not be overwritten  
+```  
+
+Overwriting canary:  
+```
+fs:28 -> segment register, it points at thread local storage
+```
+
+## one_gadget  
+```
+one_gadget --level=5 ./libc.so.6
+stay focused on constraints!
+
+show all offsets  
+one_gadget --level=5 ./libc.so.6 --raw
+```
+Above gadgets as an arg in exploit:  
+```
+gadgets_offsets = list(map(int, '234234 23423423 234234'.split()))
+one_gadget = gadgets_offsets[int(args.X)] +libc_base
+p.send(p64(one_gadget))
+
+python exploit.py X=0
+python exploit.py X=1
+python exploit.py X=2
+python exploit.py X=3
+```
