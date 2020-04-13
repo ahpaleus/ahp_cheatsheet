@@ -343,7 +343,8 @@ Extended information for virtual address 0x80490a0:
  Containing ELF sections:
             .plt.got 0x80490a0 = 0x80490a0 + 0x0
 ```
-### pwndbg search pointer
+### pwndbg 
+#### search pointer
 ```
 pwndbg> search -t pointer 0x804b398
 binary          0x8048394 0x804b398
@@ -353,13 +354,15 @@ binary          0x80490a2 cwde
 [stack]         0xffa8007c 0x804b398
 [stack]         0xffa80080 0x804b398
 ```  
-### pwndbg  
+#### useful commands
+```
 breakrva  
 nextcall  
 distance 0x78bc. 0x78..., w gdb: p/x 0x...-0x...  
 canary (takes it from AUXV, it assumes that canary can't be changed)  
 eq -> write hex qwordst at the specified address  
 pi pwndbg.memory.write....  
+```
 
 ### Format String (pwntools)
 ```
