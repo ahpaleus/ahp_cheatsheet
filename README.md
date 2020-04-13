@@ -377,12 +377,16 @@ b'%56c%74$hhna\x98\xb3\x04\x08'
 - https://www.unknowncheats.me/wiki/How_to_use_IDA_Pro_efficiently (How to use IDA PRO efficiently)  
 - https://malwareunicorn.org/workshops/idacheatsheet.html (IDA PRO cheatsheet)  
 
-### Useful settings:
+### Useful settings  
+```
 Line prefixes  
 Stack pointer  
 Auto comments  
+```
 --
+```
 right click -> copy to assembly
+```
 
 ## Heap Exploitation
 - _After tcache is filled, the free memory is placed in fastbin or unsorted bin as before._ (https://ctf-wiki.github.io/ctf-wiki/pwn/linux/glibc-heap/implementation/tcache/)  
