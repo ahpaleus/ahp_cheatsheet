@@ -431,6 +431,20 @@ full relro -> got read only, it can not be overwritten
 Overwriting canary:  
 ```
 fs:28 -> segment register, it points at thread local storage
+```  
+Libc also has a got (inet_ntoa etc.). We can:
+- Overwrite all got in libc (e.g. AAAAA) and if binary goes there, we will have a crash.
+
+Useful to check:
+```
+IO_File_jumps <- functions in input/output operations
+Ubuntu 18.03 - read only
+Ubuntu 19. - writable
+
+IO_vtable_check 
+https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/
+
+IO_accept_foreign_vtables
 ```
 
 ## one_gadget  
