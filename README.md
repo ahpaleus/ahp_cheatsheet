@@ -365,7 +365,7 @@ pi pwndbg.memory.write....
 ```
 
 ### Format String (pwntools)
-```
+```py
 >>> from pwn import *
 >>> fmtstr_payload(71, {0x804b398: 0x38}, write_size='byte')
 b'%56c%74$naaa\x98\xb3\x04\x08'
@@ -403,7 +403,7 @@ You can use these hooks to help you debug programs that use
 dynamic memory allocation, for example.
 ```
 Hook variables declared in malloc.h and their default values are 0x0 - __malloc_hook, __free_hook.  
-```
+```sh
 gef➤  p __free_hook
 $2 = (void (*)(void *, const void *)) 0x0
 ```
@@ -422,7 +422,7 @@ xor('costam', [7+i for i in range(33)])
 ```py
 pause(1)
 ```
-```
+```sh
 $ pwn asm 'nop;nop;nop'
 $ pwn cyclic 100
 $ pwn cyclic -l aaac
@@ -455,15 +455,15 @@ IO_accept_foreign_vtables
 ```
 
 ## one_gadget  
-```
-one_gadget --level=5 ./libc.so.6
+```sh
+$ one_gadget --level=5 ./libc.so.6
 stay focused on constraints!
 
 show all offsets  
-one_gadget --level=5 ./libc.so.6 --raw
+$ one_gadget --level=5 ./libc.so.6 --raw
 ```
 Above gadgets as an arg in exploit:  
-```
+```py
 gadgets_offsets = list(map(int, '234234 23423423 234234'.split()))
 one_gadget = gadgets_offsets[int(args.X)] +libc_base
 p.send(p64(one_gadget))
