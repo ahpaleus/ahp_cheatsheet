@@ -240,6 +240,14 @@ Check your current status:
 ```  
   
 ## low-level
+### exit code from the last running binary
+```
+$ ./test
+[1]    20975 segmentation fault  ./test
+$ echo $?
+139
+```
+
 ### GLIBC version
 ```sh
 ldd --version
