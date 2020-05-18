@@ -59,6 +59,11 @@ Install polish locale:
 Setup locales:  
 `update-locale LANG=pl_PL.utf8`
 
+### Swapfile oneliner
+```sh
+sudo fallocate -l 1G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile 
+```
+
 ### Add wireguard to systemd:  
 ```sh
 # Add:  
