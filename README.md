@@ -74,6 +74,13 @@ sudo systemctl start wg-quick@wg0
 # Check status:
 systemctl status wg-quick@wg0
 ```  
+### Ubuntu 18 clang-10 as "clang"
+```
+# Edit sources.list -> https://apt.llvm.org/ && accept key
+sudo apt-get update && sudo apt-get install clang-10
+```
+To use clang-10 with honggfuzz as `hfuzz-clang`:  
+ - https://gist.githubusercontent.com/junkdog/70231d6953592cd6f27def59fe19e50d/raw/92f0e73d2558402b7316021c1ab408b30e534de6/update-alternatives-clang.sh 
 
 ## Web Applications Security
 ### XSS
