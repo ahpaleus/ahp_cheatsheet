@@ -18,7 +18,8 @@ for my private purposes :)
    + [PHP](#php)
    + [ASP.NET](#aspnet)
 - [Network](#network)
-- [/dev/null](#devnull)  
+- [/dev/null](#devnull)
+- [Unix filesystem](#unix-filesystem)
 - [low-level](#low-level)  
 - [IDA PRO](#ida-pro)  
 - [Heap Exploitation](#heap-exploitation)  
@@ -251,7 +252,12 @@ echo 'set background=dark' >> $HOME/.vimrc
 Check your current status:
 /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --status
 ```  
-  
+## Unix filesystem
+### Delete duplicated files in directory  
+```
+$ fdupes -rdN .
+```
+
 ## low-level
 ### exit code from the last running binary
 ```
