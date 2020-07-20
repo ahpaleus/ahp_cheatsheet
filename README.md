@@ -506,7 +506,7 @@ python exploit.py X=3
 ## WinDbg
 Trace heap allocations if size is == 0x24:  
 ```
-bp ntdll!RtlAllocateHeap+0xe6 "r $t0=esp+0xc;.if (poi(@$t0) != 0x24) {.printf \"RtlAllocateHeap hHEAP 0x%x, \", poi(@esp+4);.printf \"Size: 0x%x, \", poi(@$t0);.printf \"Allocated chunk at 0x%x\", eax;.echo;ln poi(@esp);.echo};g"
+bp ntdll!RtlAllocateHeap+0xe6 "r $t0=esp+0xc;.if (poi(@$t0) == 0x24) {.printf \"RtlAllocateHeap hHEAP 0x%x, \", poi(@esp+4);.printf \"Size: 0x%x, \", poi(@$t0);.printf \"Allocated chunk at 0x%x\", eax;.echo;ln poi(@esp);.echo};g"
 ```
 
 Trace heap free:
