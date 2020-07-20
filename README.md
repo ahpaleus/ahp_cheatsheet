@@ -502,3 +502,14 @@ python exploit.py X=1
 python exploit.py X=2
 python exploit.py X=3
 ```
+
+## WinDbg
+Trace heap allocations if size is == 0x24:  
+```
+bp ntdll!RtlAllocateHeap+0xe6 "r $t0=esp+0xc;.if (poi(@$t0) != 0x24) {.printf \"RtlAllocateHeap hHEAP 0x%x, \", poi(@esp+4);.printf \"Size: 0x%x, \", poi(@$t0);.printf \"Allocated chunk at 0x%x\", eax;.echo;ln poi(@esp);.echo};g"
+```
+
+Trace heap free:
+```
+bp kernel32!HeapFree ".printf \"HeapFree hHeap 0x%x, \", poi(@esp+4);.printf \"Dealloc chunk at 0x%x, \", poi(@esp+0xc);.echo;ln poi(@esp);.echo;g"
+```
