@@ -23,6 +23,8 @@ for my private purposes :)
 - [low-level](#low-level)  
 - [IDA PRO](#ida-pro)  
 - [Heap Exploitation](#heap-exploitation)  
+- [Mobile](#mobile)  
+   + [iOS](#ios) 
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -512,4 +514,11 @@ bp ntdll!RtlAllocateHeap+0xe6 "r $t0=esp+0xc;.if (poi(@$t0) = 0x24) {.printf \"R
 Trace heap free:
 ```
 bp kernel32!HeapFree ".printf \"HeapFree hHeap 0x%x, \", poi(@esp+4);.printf \"Dealloc chunk at 0x%x, \", poi(@esp+0xc);.echo;ln poi(@esp);.echo;g"
+```
+## Mobile
+### iOS
+Setup network-cmds:
+```
+iPhone:/ root# apt-get install network-cmds
+iPhone:/ root# ifconfig
 ```
