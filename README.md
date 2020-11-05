@@ -526,5 +526,6 @@ Certificate pinning bypass:
  - https://github.com/nabla-c0d3/ssl-kill-switch2
  
  Useful resources: 
- - https://spaceraccoon.dev/from-checkra1n-to-frida-ios-app-pentesting-quickstart-on-ios-13
+ - https://spaceraccoon.dev/from-checkra1n-to-frida-ios-app-pentesting-quickstart-on-ios-13  
+ - https://medium.com/@AbhishekMisal/ios-application-security-static-analysis-cbe7effc6a34
  
