@@ -529,3 +529,4 @@ Certificate pinning bypass:
  - https://spaceraccoon.dev/from-checkra1n-to-frida-ios-app-pentesting-quickstart-on-ios-13  
  - https://medium.com/@AbhishekMisal/ios-application-security-static-analysis-cbe7effc6a34
  - https://spaceraccoon.dev/low-hanging-apples-hunting-credentials-and-secrets-in-ios-apps
+ - https://github.com/ivRodriguezCA/RE-iOS-Apps
