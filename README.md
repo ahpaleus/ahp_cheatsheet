@@ -522,3 +522,9 @@ Setup network-cmds:
 iPhone:/ root# apt-get install network-cmds
 iPhone:/ root# ifconfig
 ```
+Certificate pinning bypass:  
+ - https://github.com/nabla-c0d3/ssl-kill-switch2
+ 
+ Useful resources: 
+ - https://spaceraccoon.dev/from-checkra1n-to-frida-ios-app-pentesting-quickstart-on-ios-13
+ 
