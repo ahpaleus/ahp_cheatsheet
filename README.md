@@ -525,6 +525,12 @@ iPhone:/ root# ifconfig
 Certificate pinning bypass:  
  - https://github.com/nabla-c0d3/ssl-kill-switch2
  
+ Obtaining an ipa app's file:
+  - https://github.com/AloneMonkey/frida-ios-dump  
+  ```sh
+  ➜  frida-ios-dump git:(master) ./dump.py app_name
+  ```
+ 
  Useful resources: 
  - https://spaceraccoon.dev/from-checkra1n-to-frida-ios-app-pentesting-quickstart-on-ios-13  
  - https://medium.com/@AbhishekMisal/ios-application-security-static-analysis-cbe7effc6a34
