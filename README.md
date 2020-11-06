@@ -536,3 +536,4 @@ Certificate pinning bypass:
  - https://medium.com/@AbhishekMisal/ios-application-security-static-analysis-cbe7effc6a34
  - https://spaceraccoon.dev/low-hanging-apples-hunting-credentials-and-secrets-in-ios-apps
  - https://github.com/ivRodriguezCA/RE-iOS-Apps
+ - https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06b-Basic-Security-Testing.md
