@@ -35,6 +35,10 @@ Configuration file: `--collaborator-config=myconfig.config`
  - https://portswigger.net/burp/documentation/collaborator/deploying#running-on-non-standard-ports
  - https://portswigger.net/burp/documentation/collaborator/deploying#collaborator-configuration-file-format
 
+### Non HTTP traffic
+ - https://github.com/summitt/Burp-Non-HTTP-Extension
+ - https://github.com/jrmdev/mitm_relay
+
 ## Docker
 ### Run from _Dockerfile_ in directory:  
 ```docker build -t name .```  
