@@ -542,6 +542,8 @@ Certificate pinning bypass:
  - https://github.com/ivRodriguezCA/RE-iOS-Apps
  - https://support.apple.com/pl-pl/guide/security/secb0694df1a/web
  - https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06b-Basic-Security-Testing.md  
+ - https://fadeevab.com/quick-start-with-frida-to-reverse-engineer-any-ios-application/
+ - https://fadeevab.com/mobile-app-security-testing-tips-notes-ios-android/
  
  ### Objection usage
  App is run:  
