@@ -89,6 +89,22 @@ sudo apt-get update && sudo apt-get install clang-10
 To use clang-10 with honggfuzz as `hfuzz-clang`:  
  - https://gist.githubusercontent.com/junkdog/70231d6953592cd6f27def59fe19e50d/raw/92f0e73d2558402b7316021c1ab408b30e534de6/update-alternatives-clang.sh 
 
+### Static ip on ubuntu (netplan)
+```
+$ sudo vim /etc/netplan/01-netcfg.yaml
+network:
+    version: 2
+    renderer: networkd
+    ethernets:
+        ens33:
+            dhcp4: no
+            addresses: [192.168.0.18/24]
+            gateway4: 192.168.0.1
+            nameservers:
+                addresses: [1.1.1.1, 8.8.8.8]
+$ sudo netplan --debug apply
+```
+
 ## Web Applications Security
 ### XSS
 Some helpful payloads caught in the wild
