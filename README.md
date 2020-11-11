@@ -555,6 +555,7 @@ Certificate pinning bypass:
   ```
   plutil -p  ./LaunchScreen.storyboardc/Info.plist
   ```
+  
  
  Useful resources: 
  - https://spaceraccoon.dev/from-checkra1n-to-frida-ios-app-pentesting-quickstart-on-ios-13  
@@ -572,6 +573,11 @@ Certificate pinning bypass:
  ➜  ~ objection --gadget app_name explore
 ... on (iPhone: 13.6) [usb] # ios keychain dump
 ... on (iPhone: 13.6) [usb] # ios cookies get --json
+```
+
+Dump list classes to file:
+```
+➜  ~ objection --gadget app_name run ios hooking list classes > list_classes.txt
 ```
 
 
