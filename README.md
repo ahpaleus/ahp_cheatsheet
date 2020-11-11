@@ -105,6 +105,12 @@ network:
 $ sudo netplan --debug apply
 ```
 
+### Resize after adding some GBs in Vmware
+```
+sudo growpart /dev/vda 1
+sudo resize2fs /dev/vda1   
+```
+
 ## Web Applications Security
 ### XSS
 Some helpful payloads caught in the wild
