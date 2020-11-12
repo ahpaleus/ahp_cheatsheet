@@ -573,7 +573,7 @@ Certificate pinning bypass:
  - https://fadeevab.com/quick-start-with-frida-to-reverse-engineer-any-ios-application/
  - https://fadeevab.com/mobile-app-security-testing-tips-notes-ios-android/
  
- ### Objection usage
+ #### Objection usage
  App is run:  
  ```
  ➜  ~ objection --gadget app_name explore
