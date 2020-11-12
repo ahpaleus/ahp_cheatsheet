@@ -25,6 +25,7 @@ for my private purposes :)
 - [Heap Exploitation](#heap-exploitation)  
 - [Mobile](#mobile)  
    + [iOS](#ios) 
+   + [Android](#android) 
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -586,4 +587,7 @@ Dump list classes to file:
 ➜  ~ objection --gadget app_name run ios hooking list classes > list_classes.txt
 ```
 
-
+### Android
+#### Kernel exploitation
+ - https://cloudfuzz.github.io/android-kernel-exploitation
+ - https://blog.lexfo.fr/cve-2017-11176-linux-kernel-exploitation-part1.html
