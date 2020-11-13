@@ -591,6 +591,8 @@ Dump list classes to file:
 #### Kernel exploitation
  - https://cloudfuzz.github.io/android-kernel-exploitation
  - https://blog.lexfo.fr/cve-2017-11176-linux-kernel-exploitation-part1.html
+ - http://security.cs.rpi.edu/~candej2/  
+ 
 SELinux check (permissive, enforcing)
 ```
 generic_x86_64:/ $ getenforce
