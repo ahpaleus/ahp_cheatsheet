@@ -592,6 +592,7 @@ Dump list classes to file:
  - https://cloudfuzz.github.io/android-kernel-exploitation
  - https://blog.lexfo.fr/cve-2017-11176-linux-kernel-exploitation-part1.html
  - http://security.cs.rpi.edu/~candej2/  
+ - https://pwn.college/modules/kernel
  
 SELinux check (permissive, enforcing)
 ```
