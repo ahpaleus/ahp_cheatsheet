@@ -623,7 +623,7 @@ nasm to shellcode fu
 nasm -f elf64 priv_esc2.s -o priv_esc2.o
 for i in $(objdump -d priv_esc2.o -M intel |grep "^ " |cut -f2); do echo -n '\x'$i; done;echo
 ```
-```
+
 exploit draft:
 ```C
 #include <stdio.h>
