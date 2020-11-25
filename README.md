@@ -27,6 +27,7 @@ for my private purposes :)
 - [Mobile](#mobile)  
    + [iOS](#ios) 
    + [Android](#android) 
+- [Kernel Exploitation](#kernel-exploitation)  
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -603,4 +604,9 @@ SELinux check (permissive, enforcing)
 ```
 generic_x86_64:/ $ getenforce
 Enforcing
+```
+## Kernel Exploitation
+```
+~ $ cat /proc/kallsyms //dynamic kernel symbol table
+man 2 fcntl // (control over descriptors)
 ```
