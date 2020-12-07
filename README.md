@@ -17,6 +17,7 @@ for my private purposes :)
    + [SQL Injection](#sql-injection)
    + [PHP](#php)
    + [ASP.NET](#aspnet)
+   + [PDF](#pdf)
 - [Infrastructure](#infrastructure)
 - [Network](#network)
 - [/dev/null](#devnull)
@@ -241,6 +242,10 @@ $ cat test1234.txt | base64
  - RCE Telerik https://know.bishopfox.com/research/cve-2019-18935-remote-code-execution-in-telerik-ui?utm_campaign=190101_Posts_Blog&utm_source=Caleb%20-%20Github
  - https://github.com/noperator/CVE-2019-18935
  - https://github.com/Illuminopi/RCEvil.NET/    
+
+### PDF  
+ - https://gist.github.com/ast3ro/ca6eec74293be5992f35b18023b420a4
+ - https://cure53.de/pentest-report_accessmyinfo.pdf
 
 ## Infrastructure
 ### MQ
