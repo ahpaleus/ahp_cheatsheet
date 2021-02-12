@@ -460,6 +460,25 @@ Auto comments
 right click -> copy to assembly
 ```
 
+### IDAPython scripts
+Refresh the processes on the remote machine and attach immediately when it appears  
+```py
+from ida_dbg import *
+set_remote_debugger("192.168.x.x", "23946")
+load_debugger('osx', True)
+
+mission = True
+while mission:
+    pis = ida_idd.procinfo_vec_t()
+    ida_dbg.get_processes(pis)
+    for proc in pis:
+        if "process_name" in proc.name:
+            attach_process(proc.pid, -1)
+            mission = False
+            break
+
+```
+
 ## Heap Exploitation
 - _After tcache is filled, the free memory is placed in fastbin or unsorted bin as before._ (https://ctf-wiki.github.io/ctf-wiki/pwn/linux/glibc-heap/implementation/tcache/)  
 _tcache bins can only hold 7 entries at a time._ (https://drive.google.com/file/d/1XpdruvtC1qW0OKLxO8FaqU9XCl8O_SON/view)
