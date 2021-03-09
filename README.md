@@ -55,6 +55,17 @@ Configuration file: `--collaborator-config=myconfig.config`
 $ docker container stop $(docker container ls -aq)
 $ docker container rm $(docker container ls -aq)
 ```
+### Delete all
+```
+$ docker system prune -a --volumes
+
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all volumes not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+```
 
 ## Ubuntu
 ### Setup polish locales
