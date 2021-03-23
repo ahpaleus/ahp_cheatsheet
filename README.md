@@ -29,6 +29,7 @@ for my private purposes :)
    + [iOS](#ios) 
    + [Android](#android) 
 - [Kernel Exploitation](#kernel-exploitation)  
+- [Static Code Analysis](#static-code-analysis)  
 
 ## Burp Suite Professional
 ### Running own collaborator:  
@@ -705,3 +706,13 @@ _start:
     return 0;
 }
 ```
+
+## Static Code Analysis
+### Go
+- gosec
+- errcheck
+- staticcheck
+- golangci-lint
+- semgrep (+ https://github.com/dgryski/semgrep-go)
+- https://github.com/github/codeql-go
+- https://github.com/system-pclub/GCatch
