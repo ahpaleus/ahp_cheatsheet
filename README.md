@@ -718,3 +718,6 @@ _start:
 - https://github.com/system-pclub/GCatch
 - https://github.com/gordonklaus/ineffassign
 - https://github.com/jlauinger/go-geiger
+
+### C#
+- https://codeql.github.com/codeql-query-help/csharp/
