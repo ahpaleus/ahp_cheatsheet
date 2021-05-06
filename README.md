@@ -717,3 +717,4 @@ _start:
 - https://github.com/github/codeql-go
 - https://github.com/system-pclub/GCatch
 - https://github.com/gordonklaus/ineffassign
+- https://github.com/jlauinger/go-geiger
