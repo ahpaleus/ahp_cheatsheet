@@ -272,7 +272,7 @@ route get 192.168.13.14
 ## /dev/null
 ```sh
 # Find a file which does not contain two strings with ripgrep
-rg -Fvl 'check' -g '*.php' | xargs -I '{}' rg -Fvl 'permission' {} -g '*.php' 
+rg --files-without-match 'auth' -g '*.php' | xargs -I '{}' rg --files-without-match 'permission' {} 
 ```
 ### nc permanent 'web-server'
 ```sh
