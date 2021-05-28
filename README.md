@@ -725,3 +725,9 @@ _start:
 
 ### C#
 - https://codeql.github.com/codeql-query-help/csharp/
+
+### PHP
+- https://github.com/tomnomnom/gf
+```
+$ gf php-sinks .
+```
