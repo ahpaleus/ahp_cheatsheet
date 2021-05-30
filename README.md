@@ -20,6 +20,7 @@ for my private purposes :)
    + [PDF](#pdf)
 - [Infrastructure](#infrastructure)
 - [Network](#network)
+- [Active Directory](#active-directory)
 - [/dev/null](#devnull)
 - [Unix filesystem](#unix-filesystem)
 - [low-level](#low-level)  
@@ -268,6 +269,9 @@ $ cat test1234.txt | base64
 ```
 route get 192.168.13.14
 ```
+
+## Active Directory  
+- https://zer1t0.gitlab.io/posts/attacking_ad/  
 
 ## /dev/null
 ```sh
